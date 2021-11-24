@@ -8,7 +8,8 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form class="form-horizontal" method="POST" action="/admin/user/add">
+                @include('admin.element.alert')
+                <form class="form-horizontal" method="POST" action="/admin/users/add">
                     <div class="card-body">
                         <div class="form-group row">
                             <label for="inputEmail3" class="col-sm-2 col-form-label">Tên Người Dùng</label>
@@ -43,6 +44,7 @@
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-info" style="width: 150px;">Lưu</button>
                     </div>
+                    @csrf
                 </form>
             </div>
         </div>

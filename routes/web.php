@@ -28,6 +28,7 @@ Route::middleware(['auth'])->group(function() {
         Route::get('/', [MainController::class, 'index']);
         Route::get('main', [MainController::class, 'index'])->name('admin');
         Route::get('users/list', [UserController::class, 'listAll']);
+        Route::post('users/add', [UserController::class, 'storeUser']);
     });
 
 });
